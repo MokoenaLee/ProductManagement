@@ -8,7 +8,7 @@ public class ProductDB  implements ProductDAO {
 	}
 	
 	@Override
-	public String getProductString() {
+	public String getProductsString() {
 		throw new UnsupportedOperationException("Not supported yet");
 	}
 	

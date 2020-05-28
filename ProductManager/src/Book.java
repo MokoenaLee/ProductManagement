@@ -3,11 +3,38 @@ public class Book extends Product implements Printable {
 	
 	private String author;
 
-	public Book(String code, String description, double price, String author) {
-		super(code, description, price);
-		this.author = author;
+	public Book() {
+		super();
+		//this.author = author;
 		//count++;
 	}
+	
+	
+	
+	public void setCode(String code)
+	{
+		super.setCode(code);
+		//this.code = code;
+		
+	}
+	
+	
+	public void setDescription(String description)
+	{
+		super.setDescription(description);
+		//this.description = description;
+		
+	}
+	
+	public void setPrice(double price)
+	{
+		super.setPrice(price);
+		
+		//this.price = price;
+		
+	}
+	
+	
 	
 	public void setAuthor(String author) 
 	{
