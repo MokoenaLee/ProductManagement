@@ -85,8 +85,7 @@ public class ProductMaintApp
 		
 		System.out.println();
 		System.out.println(description + " has been added.");
-		
-		
+
 		
 	}
 	

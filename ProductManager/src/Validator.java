@@ -35,6 +35,7 @@ public class Validator {
 		double d = 0;
 		boolean isValid = false;
 		while(isValid == false) {
+			System.out.println(prompt);
 			if(sc.hasNextDouble())
 			{
 				d = sc.nextDouble();
