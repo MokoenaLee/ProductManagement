@@ -1,5 +1,4 @@
 /**an interface for the product*/
-public class ProductDAO {
-
-
+public interface ProductDAO extends ProductReader, ProductWriter,ProductConstants {
+	
 }
