@@ -1,7 +1,8 @@
+import java.util.ArrayList;
 
 public interface ProductReader {
 	
 	Product getProduct(String code);
-	String getProductsString();
+	ArrayList<String> getProductsString();
 
 }

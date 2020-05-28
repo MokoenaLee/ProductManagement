@@ -1,6 +1,6 @@
 
 import java.util.Scanner;
-import java.util.ArrayList;
+
 
 
 public class ProductMaintApp
@@ -9,10 +9,7 @@ public class ProductMaintApp
 	//declare class variables
 	
 	private static ProductDAO productDAO = null;
-	//ProductDAO productDAO;
-	///ArrayList<Product> products;
-	//boolean filing = false;
-	//Product newProduct = null;
+	
 	private static Scanner sc = null;
 	
 	public static void main(String args[]) 
@@ -20,10 +17,10 @@ public class ProductMaintApp
 		System.out.println("Welcome to the Product Maintenance application \n");
 		
 		//set the class variables
-		productDAO = DAOFactory.getProductDAO();
+		productDAO = DAOFactory.getProductDAO();//call factory to generate a product
 		sc = new Scanner(System.in);
 		
-		//display the command menu
+		//display the command menu of options
 		displayMenu(); 
 		
 		//perform 1 or more actions
@@ -33,7 +30,7 @@ public class ProductMaintApp
 		while(!action.equalsIgnoreCase("exit")) 
 		{
 			//get the input from the user
-			action = Validator.getString(sc, "Enter a command"); //recode
+			action = Validator.getString(sc, "Enter a command"); 
 			System.out.println();
 			
 			if(action.equalsIgnoreCase("list"))
