@@ -7,10 +7,10 @@ public class Product {
 	private double price;
 	protected static int count = 0;
 
-	public Product() {
-		code = " ";
-		description = " '";
-		price = 0;
+	public Product(String code, String description, double price) {
+		this.code = code ;
+		this.description = description;
+		this.price = price;
 	}
 	/**set method for instance variables*/
 	public void setCode(String code)

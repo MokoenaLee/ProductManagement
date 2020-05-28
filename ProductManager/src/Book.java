@@ -1,11 +1,12 @@
 
-public class Book extends Product {
+public class Book extends Product implements Printable {
+	
 	private String author;
 
-	public Book() {
-		super();
-		author = "";
-		count++;
+	public Book(String code, String description, double price, String author) {
+		super(code, description, price);
+		this.author = author;
+		//count++;
 	}
 	
 	public void setAuthor(String author) 
@@ -20,10 +21,14 @@ public class Book extends Product {
 		
 	}
 	
-	@Override
-	public String toString()
+	public void print()
 	{
-		return super.toString() + "Author:            "+ author +"\n";
+		System.out.println("Code:\t" + super.getCode());
+		System.out.println("Title:\t" + super.getDescription());
+		System.out.println("Author:\t" + this.author);
+		System.out.println("Price:\t" + super.getFormattedPrice());
+		
+		
 	}
 	
 

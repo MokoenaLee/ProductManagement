@@ -3,7 +3,7 @@ public class DAOFactory
 {
 
 	public static ProductDAO getProductDAO() {
-		Product pDAO = new ProductTextFile();
+		ProductDAO pDAO = new ProductTextFile();
 		return pDAO;
 	}
 
