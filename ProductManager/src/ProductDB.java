@@ -1,6 +1,29 @@
 /**Provides the data processing for this program. It's meant to return
  * a Product object based on the code passed to it. Creates the database layer that creates a Product Object*/
+import java.util.ArrayList;
+
 public class ProductDB  implements ProductDAO {
+	
+	private ArrayList<Product> products = new ArrayList<Product>();
+	
+	public ProductDB() {
+		Product item = new Product();
+		item.setDescription("South West Exploration");
+		item.setCode("SWE");
+		item.setPrice(49.50);
+		
+		products.add(item);
+		
+		Product product = new Product();
+		product.setDescription("All The Stars");
+		product.setCode("ATS");
+		product.setPrice(13.00);
+		
+		products.add(product);
+		
+	}
+	
+	
 	
 	@Override
 	public Product getProduct(String code) {
@@ -9,7 +32,14 @@ public class ProductDB  implements ProductDAO {
 	
 	@Override
 	public String getProductsString() {
-		throw new UnsupportedOperationException("Not supported yet");
+		String productList = " "; 
+		//reach each product object and use toString method to retrieve and return in String format
+		for(Product eachBook: products) {
+			productList += eachBook.toString() + "\n";	
+		}
+		
+		return productList;
+		//throw new UnsupportedOperationException("Not supported yet");
 	}
 	
 	@Override
@@ -35,7 +65,7 @@ public class ProductDB  implements ProductDAO {
 		if(productCode.equalsIgnoreCase("RTLove") || productCode.equalsIgnoreCase("FoWork") || productCode.equalsIgnoreCase("WinFs") ) {
 		// create Product object 
 		
-		Book b = new Book(productCode, productCode, 0, productCode);
+		Book b = new Book();
 		
 		if(productCode.equalsIgnoreCase("RTLove"))
 		{
@@ -47,7 +77,7 @@ public class ProductDB  implements ProductDAO {
 		{
 			p.setDescription("Focused Work");
 			p.setCode(productCode);
-			p.setPrice(25.50);
+			p.setPrice(30.50);
 			
 		}
 		

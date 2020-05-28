@@ -1,5 +1,6 @@
 
 import java.util.Scanner;
+import java.util.ArrayList;
 
 
 public class ProductMaintApp
@@ -8,6 +9,10 @@ public class ProductMaintApp
 	//declare class variables
 	
 	private static ProductDAO productDAO = null;
+	//ProductDAO productDAO;
+	///ArrayList<Product> products;
+	//boolean filing = false;
+	//Product newProduct = null;
 	private static Scanner sc = null;
 	
 	public static void main(String args[]) 
@@ -19,7 +24,7 @@ public class ProductMaintApp
 		sc = new Scanner(System.in);
 		
 		//display the command menu
-		displayMenu(); //to be implemented
+		displayMenu(); 
 		
 		//perform 1 or more actions
 		
@@ -32,14 +37,14 @@ public class ProductMaintApp
 			System.out.println();
 			
 			if(action.equalsIgnoreCase("list"))
-				displayAllProducts(); //recode
+				displayAllProducts();
 			else if (action.equalsIgnoreCase("add"))
 				addProduct();
 			else if (action.equalsIgnoreCase("del") || action.equalsIgnoreCase("delete") )
 				deleteProduct();
 			else if (action.equalsIgnoreCase("help") || action.equalsIgnoreCase("menu") )
 				displayMenu();
-			else if (action.equalsIgnoreCase("exit")
+			else if (action.equalsIgnoreCase("exit"))
 					System.out.println("Bye.\n");
 			else
 				System.out.println("Error! Not a valid command.\n");
@@ -53,8 +58,8 @@ public class ProductMaintApp
 	{
 		System.out.println("COMMAND MENU");
 		System.out.println("list             - List all products");
-		System.out.println("add             - Add a product");
-		System.out.println("del             - Delete a product");
+		System.out.println("add              - Add a product");
+		System.out.println("del              - Delete a product");
 		System.out.println("help             - Show this menu");
 		System.out.println("exit             - Exit this application");
 		
@@ -72,7 +77,7 @@ public class ProductMaintApp
 	public static void addProduct() 
 	{
 		String code = Validator.getString(sc,"Enter product code");
-		String description = Validator.getLine(sc,"Enter product descritpion");
+		String description = Validator.getString(sc,"Enter product descritpion");
 		double price = Validator.getDouble(sc,"Enter price:");
 		
 		Product product = new Product();

@@ -55,5 +55,11 @@ public class Product {
 		NumberFormat currency = NumberFormat.getCurrencyInstance();
 		return currency.format(price);
 	}
+	
+	public String toString()
+	{
+		
+		return "ProductCode: "+ getCode() + "\n " + "Description: " + getDescription()+ "\n'"+ "Price:" + getPrice()+"\n";
+	}
 
 }

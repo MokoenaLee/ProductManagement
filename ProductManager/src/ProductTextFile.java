@@ -2,6 +2,9 @@
 public class ProductTextFile implements ProductDAO {
 
 	public ProductTextFile() {
+		String code = " ";
+		double price  = 0;
+		String description = " ";
 		// code to initialize fields
 	}
 	/**implement the ProductReader interface*/
@@ -13,6 +16,7 @@ public class ProductTextFile implements ProductDAO {
 	}
 	
 	public String getProductsString() {
+		
 		//code that returns a string that lists all products
 		//can use constants defined
 		return " ";
