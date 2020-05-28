@@ -1,8 +1,10 @@
 
-public class ProductDAO {
+public class DAOFactory
+{
 
-	public ProductDAO() {
-		// TODO Auto-generated constructor stub
+	public static ProductDAO getProductDAO() {
+		Product pDAO = new ProductTextFile();
+		return pDAO;
 	}
 
 }

@@ -4,33 +4,40 @@ public class ProductDB {
 
 	public static Product getProduct(String productCode) 
 	{
+		Product p = null;
+				
+		if(productCode.equalsIgnoreCase("RTLove") || productCode.equalsIgnoreCase("FoWork") || productCode.equalsIgnoreCase("WinFs") ) {
 		// create Product object 
-		Product p = new Product();
 		
-		//fill Product object with data
-		p.setCode(productCode);
+		Book b = new Book();
 		
-		if(productCode.equalsIgnoreCase("OOP"))
+		if(productCode.equalsIgnoreCase("RTLove"))
 		{
-			p.setDescription("Object Oriented Programming");
+			p.setDescription("Return to Love");
+			p.setCode(productCode);
 			p.setPrice(49.50);
 		} 
-		else if (productCode.equalsIgnoreCase("Pizza"))
+		else if (productCode.equalsIgnoreCase("FoWork"))
 		{
-			p.setDescription("Pappa John's");
+			p.setDescription("Focused Work");
+			p.setCode(productCode);
 			p.setPrice(25.50);
 			
 		}
 		
-		else if (productCode.equalsIgnoreCase("Teas"))
+		else if (productCode.equalsIgnoreCase("WinFs"))
 		{
-			p.setDescription("Rooibos");
+			p.setDescription("Win over Friends");
+			p.setCode(productCode);
 			p.setPrice(25.50);
 		}
 		else 
 		{
-			p.setDescription("Unknown");
+			p = b;
 		}
+		
+		
+	}
 		return p;
 		
 	}
